@@ -1,4 +1,3 @@
-// src/components/CompanyDropdown.tsx
 import { useEffect, useState } from 'react';
 import api from '../utils/api';
 import { User } from '../models/models';

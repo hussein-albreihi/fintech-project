@@ -1,4 +1,3 @@
-// prisma/seed.ts
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
@@ -16,10 +15,9 @@ async function main() {
 
   console.log(`✅ Seeded ${users.count} users.`);
 
-  // Optional: Seed a loan for one of the users (e.g., user with ID 1)
   const loan = await prisma.loan.create({
     data: {
-      userId: 1, // assuming user with ID 1 exists
+      userId: 1,
       amount: 2500,
       interestRate: 5.2,
       startDate: new Date('2025-04-01'),

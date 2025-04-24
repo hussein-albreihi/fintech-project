@@ -8,11 +8,11 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: 'http://localhost:3001', // Update this if your server URL changes
+        url: 'http://localhost:3001',
       },
     ],
   },
-  apis: ['./src/routes/*.ts'], // Path to your route files
+  apis: ['./src/routes/*.ts']
 };
 
 export default swaggerOptions;
