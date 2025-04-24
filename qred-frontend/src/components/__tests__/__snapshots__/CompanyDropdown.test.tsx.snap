@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompanyDropdown Component renders correctly with a selected user 1`] = `null`;
+
+exports[`CompanyDropdown Component renders correctly with no selected user 1`] = `null`;

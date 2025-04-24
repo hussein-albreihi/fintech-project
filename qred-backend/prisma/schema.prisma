@@ -1,0 +1,35 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  loans     Loan[]
+}
+
+model Loan {
+  id            Int      @id @default(autoincrement())
+  userId        Int
+  amount        Float
+  interestRate  Float
+  startDate     DateTime
+  dueDate       DateTime
+  status        LoanStatus
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+enum LoanStatus {
+  ACTIVE
+  PAID
+  OVERDUE
+}
